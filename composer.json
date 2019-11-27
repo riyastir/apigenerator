@@ -1,24 +1,20 @@
 {
-    "name": "laraveldaily/apigenerator",
-    "description": "API Generator for Laravel 5",
+    "name": "riyastir/apigenerator",
+    "description": "API Generator for Laravel 6",
     "license": "MIT",
     "authors": [
         {
-            "name": "KarolisNarkevicius",
-            "email": "narkevicius.karolis@gmail.com"
-        },
-        {
-            "name": "PovilasKorop",
-            "email": "povilas@laraveldaily.com"
+            "name": "Mohamed Riyas",
+            "email": "mail@riyas.co.in"
         }
     ],
-    "version": "0.1.9",
+    "version": "0.2.0",
     "require": {
-        "laravel/framework": "5.4.*|5.5.*|5.6.*|5.7.*"
+        "laravel/framework": "5.4.*|5.5.*|5.6.*|5.7.*|5.8.*|6.0.*"
     },
     "autoload": {
         "psr-4": {
-            "Laraveldaily\\Apigenerator\\": "src/"
+            "Riyastir\\Apigenerator\\": "src/"
         }
     }
 }
