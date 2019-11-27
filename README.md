@@ -1,4 +1,4 @@
-# API Generator for Laravel 5.4 and above
+# API Generator for Laravel 6.0 and above
 
 Package to create API Controller and Route entry with one `Artisan` command.
 
