@@ -1,7 +1,7 @@
 <?php
 
-namespace Laraveldaily\Apigenerator\Generators;
-
+namespace Riyastir\Apigenerator\Generators;
+use Illuminate\Support\Str;
 class ApiControllerGenerator
 {
     protected $template;
@@ -15,7 +15,7 @@ class ApiControllerGenerator
         $variables = [
             '$_MODEL_NAME_LOWER_$'  => lcfirst($name),
             '$_MODEL_NAME_$'        => $name,
-            '$_MODEL_NAME_PLURAL_$' => str_plural($name),
+            '$_MODEL_NAME_PLURAL_$' => Str::plural($name),
         ];
 
         $this->template = new Template();
@@ -25,7 +25,7 @@ class ApiControllerGenerator
 
     public function exists()
     {
-        return file_exists(base_path('app/Http/Controllers/Api/' . str_plural($this->name) . 'Controller.php'));
+        return file_exists(base_path('app/Http/Controllers/Api/' . Str::plural($this->name) . 'Controller.php'));
     }
 
     public function create()
@@ -36,7 +36,7 @@ class ApiControllerGenerator
             mkdir(base_path('app/Http/Controllers/Api'), 775);
         }
 
-        file_put_contents(base_path('app/Http/Controllers/Api/' . str_plural($this->name) . 'Controller.php'), $this->template->string);
+        file_put_contents(base_path('app/Http/Controllers/Api/' . Str::plural($this->name) . 'Controller.php'), $this->template->string);
 
         if ($this->exists()) {
             return true;

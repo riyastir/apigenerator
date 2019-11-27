@@ -1,10 +1,11 @@
 <?php
 
-namespace Laraveldaily\Apigenerator\Commands;
+namespace Riyastir\Apigenerator\Commands;
 
 use Illuminate\Console\Command;
-use Laraveldaily\Apigenerator\Generators\ApiControllerGenerator;
-use Laraveldaily\Apigenerator\Generators\ApiRouteGenerator;
+use Illuminate\Support\Str;
+use Riyastir\Apigenerator\Generators\ApiControllerGenerator;
+use Riyastir\Apigenerator\Generators\ApiRouteGenerator;
 
 class GenerateApiCommand extends Command
 {
@@ -50,7 +51,7 @@ class GenerateApiCommand extends Command
         }
 
         $route = new ApiRouteGenerator();
-        if (!$route->resource(str_plural($model))) {
+        if (!$route->resource(Str::plural($model))) {
             $route->generate();
             $this->info('Created API route.');
         } else {

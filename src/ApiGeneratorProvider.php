@@ -1,9 +1,9 @@
 <?php
 
-namespace Laraveldaily\Apigenerator;
+namespace Riyastir\Apigenerator;
 
 use Illuminate\Support\ServiceProvider;
-use Laraveldaily\Apigenerator\Commands\GenerateApiCommand;
+use Riyastir\Apigenerator\Commands\GenerateApiCommand;
 
 class ApiGeneratorProvider extends ServiceProvider
 {
